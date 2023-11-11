@@ -31,13 +31,13 @@ describe("marsCalculator", () => {
   })
 })
 
-// describe("venusCalculator", () => {
-//   test("It should take an age in earth years and update your age in venus years", () => {
-//     let myAge = new Age(37);
-//     myAge.venusCalculator();
-//     expect(myAge.venusAge).toEqual(60.2);
-//   })
-// })
+describe("jupiterCalculator", () => {
+  test("It should take an age in earth years and update your age in jupiter years", () => {
+    let myAge = new Age(37);
+    myAge.jupiterCalculator();
+    expect(myAge.jupiterAge).toEqual(3.1);
+  })
+})
 
 // describe("venusCalculator", () => {
 //   test("It should take an age in earth years and update your age in venus years", () => {

@@ -37,10 +37,10 @@ export default class Age {
     return this;
   }
 
-  // jupiterCalculator() {
-  //   this.jupiterAge = parseFloat((this.earthAge / Age.jupiterYears).toFixed(1));
-  //   return thisaturn
-  // }
+  jupiterCalculator() {
+    // this.jupiterAge = parseFloat((this.earthAge / Age.jupiterYears).toFixed(1));
+    return thisaturn
+  }
 
   // saturnCalculator() {
   //   this.saturnAge = parseFloat((this.earthAge / Age.saturnYears).toFixed(1));
