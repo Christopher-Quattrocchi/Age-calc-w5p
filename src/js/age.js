@@ -75,15 +75,16 @@ export default class Age {
   }
 
   futureBirthday() {
-    this.yearsUntilAgeEarth = this.futureAge - this.earthAge;
-    this.yearsUntilAgeMercury = (this.futureAge - this.earthAge) / Age.mercuryYears;
-    this.yearsUntilAgeVenus = (this.futureAge - this.earthAge) / Age.venusYears;
-    this.yearsUntilAgeMars = (this.futureAge - this.earthAge) / Age.marsYears;
-    this.yearsUntilAgeJupiter = (this.futureAge - this.earthAge) / Age.jupiterYears;
-    this.yearsUntilAgeSaturn = (this.futureAge - this.earthAge) / Age.saturnYears;
-    this.yearsUntilAgeUranus = (this.futureAge - this.earthAge) / Age.uranusYears;
-    this.yearsUntilAgeNeptune = (this.futureAge - this.earthAge) / Age.neptuneYears;
-    this.yearsUntilAgePluto = (this.futureAge - this.earthAge) / Age.plutoYears;
+    this.yearsUntilAgeEarth = parseFloat((this.futureAge - this.earthAge).toFixed(2));
+    this.yearsUntilAgeMercury = parseFloat(((this.futureAge - this.earthAge) / Age.mercuryYears).toFixed(2));
+    this.yearsUntilAgeVenus = parseFloat(((this.futureAge - this.earthAge) / Age.venusYears).toFixed(2));
+    this.yearsUntilAgeMars = parseFloat(((this.futureAge - this.earthAge) / Age.marsYears).toFixed(2));
+    this.yearsUntilAgeJupiter = parseFloat(((this.futureAge - this.earthAge) / Age.jupiterYears).toFixed(2));
+    this.yearsUntilAgeSaturn = parseFloat(((this.futureAge - this.earthAge) / Age.saturnYears).toFixed(2));
+    this.yearsUntilAgeUranus = parseFloat(((this.futureAge - this.earthAge) / Age.uranusYears).toFixed(2));
+    this.yearsUntilAgeNeptune = parseFloat(((this.futureAge - this.earthAge) / Age.neptuneYears).toFixed(2));
+    this.yearsUntilAgePluto = parseFloat(((this.futureAge - this.earthAge) / Age.plutoYears).toFixed(2));
     return this;
   }
 }
+
