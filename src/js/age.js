@@ -48,7 +48,7 @@ export default class Age {
   }
 
   uranusCalculator() {
-    // this.uranusAge = parseFloat((this.earthAge / Age.uranusYears).toFixed(2));
+    this.uranusAge = parseFloat((this.earthAge / Age.uranusYears).toFixed(2));
     return this;
   }
 
