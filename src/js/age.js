@@ -53,7 +53,7 @@ export default class Age {
   }
 
   neptuneCalculator() {
-    // this.neptuneAge = parseFloat((this.earthAge / Age.neptuneYears).toFixed(2));
+    this.neptuneAge = parseFloat((this.earthAge / Age.neptuneYears).toFixed(2));
     return this;
   }
 
