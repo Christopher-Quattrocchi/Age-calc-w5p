@@ -8,8 +8,10 @@ export default class Age {
   static neptuneYears = 165;
   static plutoYears = 248;
 
-  constructor(earthAge) {
+  constructor(earthAge, futureAge) {
+    //Age in years for each planet including pluto
     this.earthAge = earthAge;
+    this.futureAge = futureAge;
     this.mercuryAge = null;
     this.venusAge = null;
     this.marsAge = null;
@@ -18,6 +20,16 @@ export default class Age {
     this.uranusAge = null;
     this.neptuneAge = null;
     this.plutoAge = null;
+    //Years until a certain age for each planet
+    this.yearsUntilAgeEarth = null;
+    this.yearsUntilAgeMercury = null;
+    this.yearsUntilAgeVenus = null;
+    this.yearsUntilAgeMars = null;
+    this.yearsUntilAgeJupiter = null;
+    this.yearsUntilAgeSaturn = null;
+    this.yearsUntilAgeUranus = null;
+    this.yearsUntilAgeNeptune = null;
+    this.yearsUntilAgePluto = null;
   }
 
 
@@ -59,6 +71,19 @@ export default class Age {
 
   plutoCalculator() {
     this.plutoAge = parseFloat((this.earthAge / Age.plutoYears).toFixed(2));
+    return this;
+  }
+
+  futureBirthday() {
+    this.yearsUntilAgeEarth = this.futureAge - this.earthAge;
+    this.yearsUntilAgeMercury = (this.futureAge - this.earthAge) / Age.mercuryYears;
+    this.yearsUntilAgeVenus = (this.futureAge - this.earthAge) / Age.venusYears;
+    this.yearsUntilAgeMars = (this.futureAge - this.earthAge) / Age.marsYears;
+    this.yearsUntilAgeJupiter = (this.futureAge - this.earthAge) / Age.jupiterYears;
+    this.yearsUntilAgeSaturn = (this.futureAge - this.earthAge) / Age.saturnYears;
+    this.yearsUntilAgeUranus = (this.futureAge - this.earthAge) / Age.uranusYears;
+    this.yearsUntilAgeNeptune = (this.futureAge - this.earthAge) / Age.neptuneYears;
+    this.yearsUntilAgePluto = (this.futureAge - this.earthAge) / Age.plutoYears;
     return this;
   }
 }

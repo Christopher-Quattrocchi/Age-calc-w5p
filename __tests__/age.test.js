@@ -70,3 +70,19 @@ describe("plutoCalculator", () => {
     expect(myAge.plutoAge).toEqual(0.15);
   })
 })
+
+describe("futureBirthday", () => {
+  test("It should return how many years until a birthday in earth years, and for each planet", () => {
+    let myAge = new Age(37, 40);
+    myAge.futureBirthday();
+    expect(myAge.yearsUntilAgeEarth).toEqual(3);
+    expect(myAge.yearsUntilAgeMercury).toEqual(12.45);
+    expect(myAge.yearsUntilAgeVenus).toEqual(4.88);
+    expect(myAge.yearsUntilAgeMars).toEqual(1.60);
+    expect(myAge.yearsUntilAgeSaturn).toEqual(0.10);
+    expect(myAge.yearsUntilAgeUranus).toEqual(0.04);
+    expect(myAge.yearsUntilAgeNeptune).toEqual(0.02);
+    expect(myAge.yearsUntilAgePluto).toEqual(0.01);
+  })
+})
+
