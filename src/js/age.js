@@ -38,8 +38,8 @@ export default class Age {
   }
 
   jupiterCalculator() {
-    // this.jupiterAge = parseFloat((this.earthAge / Age.jupiterYears).toFixed(1));
-    return thisaturn
+    this.jupiterAge = parseFloat((this.earthAge / Age.jupiterYears).toFixed(1));
+    return this;
   }
 
   // saturnCalculator() {
