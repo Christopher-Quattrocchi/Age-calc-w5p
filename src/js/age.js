@@ -33,32 +33,32 @@ export default class Age {
   }
 
   marsCalculator() {
-    this.marsAge = parseFloat((this.earthAge / Age.marsYears).toFixed(1));
+    // this.marsAge = parseFloat((this.earthAge / Age.marsYears).toFixed(1));
     return this;
   }
 
-  jupiterCalculator() {
-    this.jupiterAge = parseFloat((this.earthAge / Age.jupiterYears).toFixed(1));
-    return thisaturn
-  }
+  // jupiterCalculator() {
+  //   this.jupiterAge = parseFloat((this.earthAge / Age.jupiterYears).toFixed(1));
+  //   return thisaturn
+  // }
 
-  saturnCalculator() {
-    this.saturnAge = parseFloat((this.earthAge / Age.saturnYears).toFixed(1));
-    return this;
-  }
+  // saturnCalculator() {
+  //   this.saturnAge = parseFloat((this.earthAge / Age.saturnYears).toFixed(1));
+  //   return this;
+  // }
 
-  uranusCalculator() {
-    this.uranusAge = parseFloat((this.earthAge / Age.uranusYears).toFixed(1));
-    return this;
-  }
+  // uranusCalculator() {
+  //   this.uranusAge = parseFloat((this.earthAge / Age.uranusYears).toFixed(1));
+  //   return this;
+  // }
 
-  neptuneCalculator() {
-    this.neptuneAge = parseFloat((this.earthAge / Age.neptuneYears).toFixed(1));
-    return this;
-  }
+  // neptuneCalculator() {
+  //   this.neptuneAge = parseFloat((this.earthAge / Age.neptuneYears).toFixed(1));
+  //   return this;
+  // }
 
-  plutoCalculator() {
-    this.plutoAge = parseFloat((this.earthAge / Age.plutoYears).toFixed(1));
-    return this;
-  }
+  // plutoCalculator() {
+  //   this.plutoAge = parseFloat((this.earthAge / Age.plutoYears).toFixed(1));
+  //   return this;
+  // }
 }
