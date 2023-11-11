@@ -52,10 +52,10 @@ export default class Age {
     return this;
   }
 
-  // neptuneCalculator() {
-  //   this.neptuneAge = parseFloat((this.earthAge / Age.neptuneYears).toFixed(2));
-  //   return this;
-  // }
+  neptuneCalculator() {
+    // this.neptuneAge = parseFloat((this.earthAge / Age.neptuneYears).toFixed(2));
+    return this;
+  }
 
   // plutoCalculator() {
   //   this.plutoAge = parseFloat((this.earthAge / Age.plutoYears).toFixed(2));

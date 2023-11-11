@@ -55,13 +55,13 @@ describe("uranusCalculator", () => {
   })
 })
 
-// describe("neptuneCalculator", () => {
-//   test("It should take an age in earth years and update your age in neptune years", () => {
-//     let myAge = new Age(37);
-//     myAge.neptuneCalculator();
-//     expect(myAge.neptuneAge).toEqual(0.22);
-//   })
-// })
+describe("neptuneCalculator", () => {
+  test("It should take an age in earth years and update your age in neptune years", () => {
+    let myAge = new Age(37);
+    myAge.neptuneCalculator();
+    expect(myAge.neptuneAge).toEqual(0.22);
+  })
+})
 
 // describe("plutoCalculator", () => {
 //   test("It should take an age in earth years and update your age in pluto years", () => {
