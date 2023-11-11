@@ -12,7 +12,7 @@ export default class Age {
   }
 
   mercuryCalculator() {
-    // this.mercuryAge = (this.earthAge / 0.24);
+    this.mercuryAge = parseFloat((this.earthAge / 0.24).toFixed(1));
     return this;
   }
 }
