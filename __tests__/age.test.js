@@ -14,3 +14,10 @@ describe("mercuryCalculator", () => {
     expect(myAge.mercuryAge).toEqual(154.2);
   })
 })
+
+describe("venusCalculator", () => {
+  test("It should take an age in earth years and update your age in venus years", () => {
+    let myAge = new Age(37);
+    myAge.venusCalculator.toEqual(60.2);
+  })
+})

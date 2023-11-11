@@ -28,6 +28,7 @@ export default class Age {
   }
 
   venusCalculator() {
-    this.venusAge = parseFloat((this.earthAge / 0.24).toFixed(1));
+    // this.venusAge = parseFloat((this.earthAge / Age.venusYears).toFixed(1));
+    return this;
   }
 }
