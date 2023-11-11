@@ -43,7 +43,7 @@ export default class Age {
   }
 
   saturnCalculator() {
-    // this.saturnAge = parseFloat((this.earthAge / Age.saturnYears).toFixed(1));
+    this.saturnAge = parseFloat((this.earthAge / Age.saturnYears).toFixed(1));
     return this;
   }
 
