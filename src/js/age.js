@@ -33,7 +33,7 @@ export default class Age {
   }
 
   marsCalculator() {
-    // this.marsAge = parseFloat((this.earthAge / Age.marsYears).toFixed(1));
+    this.marsAge = parseFloat((this.earthAge / Age.marsYears).toFixed(1));
     return this;
   }
 
