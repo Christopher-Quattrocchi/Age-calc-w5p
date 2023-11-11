@@ -32,6 +32,16 @@ export default class Age {
     this.yearsUntilAgeUranus = null;
     this.yearsUntilAgeNeptune = null;
     this.yearsUntilAgePluto = null;
+    //Days until birthday on each planet
+    this.daysUntilBirthdayEarth = null;
+    this.daysUntilBirthdayMercury = null;
+    this.daysUntilBirthdayVenus = null;
+    this.daysUntilBirthdayMars = null;
+    this.daysUntilBirthdayJupiter = null;
+    this.daysUntilBirthdaySaturn = null;
+    this.daysUntilBirthdayUranus = null;
+    this.daysUntilBirthdayNeptune = null;
+    this.daysUntilBirthdayPluto = null;
   }
 
 
@@ -93,7 +103,19 @@ export default class Age {
     let day = this.birthdate.getDate();
     let month = this.birthdate.getMonth() + 1;
     let year = this.birthdate.getFullYear();
-    this.birthdate
+    let currentDate = new Date();
+    let currentDay = currentDate.getDate();
+    let currentMonth = currentDate.getMonth() + 1;
+    let currentYear = currentDate.getFullYear();
+
+    if (currentMonth > month || (currentMonth === month && currentDay > day)) {
+    
+        this.daysUntilBirthdayEarth = currentDay - day;
+      
+    } else if (currentMonth < month || (currentMonth === month && currentDay < day)) {
+
+    }
+
   }
 
 }
