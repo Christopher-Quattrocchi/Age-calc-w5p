@@ -1,6 +1,6 @@
 export default class Age {
   static mercuryYears = 0.24;
-  static venusYears = 0.62;
+  static venusYears = 0.615;
   static marsYears = 1.88;
   static jupiterYears = 11.86;
   static saturnYears = 29.46;
@@ -28,7 +28,7 @@ export default class Age {
   }
 
   venusCalculator() {
-    // this.venusAge = parseFloat((this.earthAge / Age.venusYears).toFixed(1));
+    this.venusAge = parseFloat((this.earthAge / Age.venusYears).toFixed(1));
     return this;
   }
 }
