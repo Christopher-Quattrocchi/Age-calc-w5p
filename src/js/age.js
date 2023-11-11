@@ -8,10 +8,12 @@ export default class Age {
   static neptuneYears = 165;
   static plutoYears = 248;
 
-  constructor(earthAge, futureAge) {
-    //Age in years for each planet including pluto
+  constructor(earthAge, futureAge, birthdate) {
+    //Earth age, future age, birthdate
     this.earthAge = earthAge;
     this.futureAge = futureAge;
+    this.birthdate = new Date(birthdate);
+    //age on each planet
     this.mercuryAge = null;
     this.venusAge = null;
     this.marsAge = null;
@@ -86,5 +88,13 @@ export default class Age {
     this.yearsUntilAgePluto = parseFloat(((this.futureAge - this.earthAge) / Age.plutoYears).toFixed(2));
     return this;
   }
+
+  nextBirthday() {
+    let day = this.birthdate.getDate();
+    let month = this.birthdate.getMonth() + 1;
+    let year = this.birthdate.getFullYear();
+    this.birthdate
+  }
+
 }
 
