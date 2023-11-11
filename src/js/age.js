@@ -47,10 +47,10 @@ export default class Age {
     return this;
   }
 
-  // uranusCalculator() {
-  //   // this.uranusAge = parseFloat((this.earthAge / Age.uranusYears).toFixed(2));
-  //   return this;
-  // }
+  uranusCalculator() {
+    // this.uranusAge = parseFloat((this.earthAge / Age.uranusYears).toFixed(2));
+    return this;
+  }
 
   // neptuneCalculator() {
   //   this.neptuneAge = parseFloat((this.earthAge / Age.neptuneYears).toFixed(2));
