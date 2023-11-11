@@ -42,10 +42,10 @@ export default class Age {
     return this;
   }
 
-  // saturnCalculator() {
-  //   this.saturnAge = parseFloat((this.earthAge / Age.saturnYears).toFixed(1));
-  //   return this;
-  // }
+  saturnCalculator() {
+    // this.saturnAge = parseFloat((this.earthAge / Age.saturnYears).toFixed(1));
+    return this;
+  }
 
   // uranusCalculator() {
   //   this.uranusAge = parseFloat((this.earthAge / Age.uranusYears).toFixed(1));
