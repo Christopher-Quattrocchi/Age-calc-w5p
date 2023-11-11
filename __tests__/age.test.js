@@ -63,10 +63,10 @@ describe("neptuneCalculator", () => {
   })
 })
 
-// describe("plutoCalculator", () => {
-//   test("It should take an age in earth years and update your age in pluto years", () => {
-//     let myAge = new Age(37);
-//     myAge.plutoCalculator();
-//     expect(myAge.plutoAge).toEqual(0.15);
-//   })
-// })
+describe("plutoCalculator", () => {
+  test("It should take an age in earth years and update your age in pluto years", () => {
+    let myAge = new Age(37);
+    myAge.plutoCalculator();
+    expect(myAge.plutoAge).toEqual(0.15);
+  })
+})

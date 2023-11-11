@@ -57,8 +57,8 @@ export default class Age {
     return this;
   }
 
-  // plutoCalculator() {
-  //   this.plutoAge = parseFloat((this.earthAge / Age.plutoYears).toFixed(2));
-  //   return this;
-  // }
+  plutoCalculator() {
+    // this.plutoAge = parseFloat((this.earthAge / Age.plutoYears).toFixed(2));
+    return this;
+  }
 }
