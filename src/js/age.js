@@ -1,3 +1,5 @@
+console.log("Inside age.js");
+
 export default class Age {
   static mercuryYears = 0.241;
   static venusYears = 0.615;
