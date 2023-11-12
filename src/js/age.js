@@ -108,15 +108,19 @@ export default class Age {
     let currentMonth = currentDate.getMonth() + 1;
     let currentYear = currentDate.getFullYear();
 
+    let nextBirthday;
+
     if (currentMonth > month || (currentMonth === month && currentDay > day)) {
-    
-        this.daysUntilBirthdayEarth = currentDay - day;
-      
+      nextBirthday = new Date(currentYear + 1, month - 1, day);
     } else if (currentMonth < month || (currentMonth === month && currentDay < day)) {
-
+      nextBirthday = new Date(currentYear, month - 1, day);
+    } else {
+      this.daysUntilBirthdayEarth = 0;
+      return this;
     }
-
+    const difference = nextBirthday - currentDate;
+    this.daysUntilBirthdayEarth = parseInt((difference / (1000 * 60 * 60 * 24)).toFixed(0));
+    return this;
   }
-
 }
 

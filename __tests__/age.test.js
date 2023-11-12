@@ -87,11 +87,34 @@ describe("futureBirthday", () => {
 });
 
 describe("nextBirthday", () => {
-  test("it should return how many days until a birthday on earth", () => {
+  const originalDate = Date.now.bind(global.Date);
+  const testDate = (year, month, day) => {
+    global.Date.now = () => new Date(year, month -1, day).getTime();
+  };
+
+  afterEach(() => {
+    global.Date.now = originalDate;
+  });
+
+  test("current date after the birthday this year", () => {
+    testDate(2023, 3, 1);
     let myAge = new Age(37, 40, '1986-02-07');
-    let current
     myAge.nextBirthday();
-    expect(myAge.nextBirthday).toEqual(88);
+    expect(myAge.daysUntilBirthdayEarth).toBeGreaterThan(0);
+  });
+
+  test("current date is before birthday this year", () => {
+    testDate(2023, 1, 1);
+    let myAge = new Age(37, 40, '1986-02-07');
+    myAge.nextBirthday();
+    expect(myAge.daysUntilBirthdayEarth).toBeLessThan(37);
+  });
+
+  test("current date is birthday", () => {
+    testDate(2023, 2, 7);
+    let myAge = new Age(37, 40, '1986-02-07');
+    myAge.nextBirthday();
+    expect(myAge.daysUntilBirthdayEarth).toEqual(0);
   });
 });
-
+  
