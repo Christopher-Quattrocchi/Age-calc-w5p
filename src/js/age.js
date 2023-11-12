@@ -118,14 +118,14 @@ export default class Age {
 
     const difference = nextBirthday.getTime() - currentDate.getTime();
     this.daysUntilBirthdayEarth = Math.round(difference / (1000 * 60 * 60 * 24));
-    this.daysUntilBirthdayMercury = Math.round(this.daysUntilBirthdayEarth / Age.mercuryYears);
-    this.daysUntilBirthdayVenus = Math.round(this.daysUntilBirthdayEarth / Age.venusYears);
-    this.daysUntilBirthdayMars = Math.round(this.daysUntilBirthdayEarth / Age.marsYears);
-    this.daysUntilBirthdayJupiter = Math.round(this.daysUntilBirthdayEarth / Age.jupiterYears);
-    this.daysUntilBirthdaySaturn = Math.round(this.daysUntilBirthdayEarth / Age.saturnYears);
-    this.daysUntilBirthdayUranus = Math.round(this.daysUntilBirthdayEarth / Age.uranusYears);
-    this.daysUntilBirthdayNeptune = Math.round(this.daysUntilBirthdayEarth / Age.neptuneYears);
-    this.daysUntilBirthdayPluto = Math.round(this.daysUntilBirthdayEarth / Age.plutoYears);
+    this.daysUntilBirthdayMercury = Math.round(this.daysUntilBirthdayEarth * Age.mercuryYears);
+    this.daysUntilBirthdayVenus = Math.round(this.daysUntilBirthdayEarth * Age.venusYears);
+    this.daysUntilBirthdayMars = Math.round(this.daysUntilBirthdayEarth * Age.marsYears);
+    this.daysUntilBirthdayJupiter = Math.round(this.daysUntilBirthdayEarth * Age.jupiterYears);
+    this.daysUntilBirthdaySaturn = Math.round(this.daysUntilBirthdayEarth * Age.saturnYears);
+    this.daysUntilBirthdayUranus = Math.round(this.daysUntilBirthdayEarth * Age.uranusYears);
+    this.daysUntilBirthdayNeptune = Math.round(this.daysUntilBirthdayEarth * Age.neptuneYears);
+    this.daysUntilBirthdayPluto = Math.round(this.daysUntilBirthdayEarth * Age.plutoYears);
     return this;
   }
 }

@@ -115,14 +115,14 @@ describe("nextBirthday", () => {
     let myAge = new Age(37, 40, '1986-02-07');
     myAge.nextBirthday();
     expect(myAge.daysUntilBirthdayEarth).toBeLessThanOrEqual(37);
-    expect(myAge.daysUntilBirthdayMercury).toBeLessThanOrEqual(37);
-    expect(myAge.daysUntilBirthdayVenus).toBeLessThanOrEqual(37);
-    expect(myAge.daysUntilBirthdayMars).toBeLessThanOrEqual(37);
-    expect(myAge.daysUntilBirthdayJupiter).toBeLessThanOrEqual(37);
-    expect(myAge.daysUntilBirthdaySaturn).toBeLessThanOrEqual(37);
-    expect(myAge.daysUntilBirthdayUranus).toBeLessThanOrEqual(37);
-    expect(myAge.daysUntilBirthdayNeptune).toBeLessThanOrEqual(37);
-    expect(myAge.daysUntilBirthdayPluto).toBeLessThanOrEqual(37);
+    expect(myAge.daysUntilBirthdayMercury).toBeLessThanOrEqual(154);
+    expect(myAge.daysUntilBirthdayVenus).toBeLessThanOrEqual(60);
+    expect(myAge.daysUntilBirthdayMars).toBeLessThanOrEqual(20);
+    expect(myAge.daysUntilBirthdayJupiter).toBeLessThanOrEqual(3);
+    expect(myAge.daysUntilBirthdaySaturn).toBeLessThanOrEqual(1);
+    expect(myAge.daysUntilBirthdayUranus).toBeLessThanOrEqual(0);
+    expect(myAge.daysUntilBirthdayNeptune).toBeLessThanOrEqual(0);
+    expect(myAge.daysUntilBirthdayPluto).toBeLessThanOrEqual(0);
   });
 
   test("current date is birthday", () => {
