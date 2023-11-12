@@ -100,6 +100,14 @@ describe("nextBirthday", () => {
     let myAge = new Age(37, 40, '1986-02-07');
     myAge.nextBirthday();
     expect(myAge.daysUntilBirthdayEarth).toBeGreaterThan(0);
+    expect(myAge.daysUntilBirthdayMercury).toBeGreaterThan(0);
+    expect(myAge.daysUntilBirthdayVenus).toBeGreaterThan(0);
+    expect(myAge.daysUntilBirthdayMars).toBeGreaterThan(0);
+    expect(myAge.daysUntilBirthdayJupiter).toBeGreaterThan(0);
+    expect(myAge.daysUntilBirthdaySaturn).toBeGreaterThan(0);
+    expect(myAge.daysUntilBirthdayUranus).toBeGreaterThan(0);
+    expect(myAge.daysUntilBirthdayNeptune).toBeGreaterThan(0);
+    expect(myAge.daysUntilBirthdayPluto).toBeGreaterThan(0);
   });
 
   test("current date is before birthday this year", () => {
@@ -107,6 +115,14 @@ describe("nextBirthday", () => {
     let myAge = new Age(37, 40, '1986-02-07');
     myAge.nextBirthday();
     expect(myAge.daysUntilBirthdayEarth).toBeLessThanOrEqual(37);
+    expect(myAge.daysUntilBirthdayMercury).toBeLessThanOrEqual(37);
+    expect(myAge.daysUntilBirthdayVenus).toBeLessThanOrEqual(37);
+    expect(myAge.daysUntilBirthdayMars).toBeLessThanOrEqual(37);
+    expect(myAge.daysUntilBirthdayJupiter).toBeLessThanOrEqual(37);
+    expect(myAge.daysUntilBirthdaySaturn).toBeLessThanOrEqual(37);
+    expect(myAge.daysUntilBirthdayUranus).toBeLessThanOrEqual(37);
+    expect(myAge.daysUntilBirthdayNeptune).toBeLessThanOrEqual(37);
+    expect(myAge.daysUntilBirthdayPluto).toBeLessThanOrEqual(37);
   });
 
   test("current date is birthday", () => {
@@ -114,6 +130,14 @@ describe("nextBirthday", () => {
     let myAge = new Age(37, 40, '1986-02-07');
     myAge.nextBirthday();
     expect(myAge.daysUntilBirthdayEarth).toEqual(0);
+    expect(myAge.daysUntilBirthdayMercury).toEqual(0);
+    expect(myAge.daysUntilBirthdayVenus).toEqual(0);
+    expect(myAge.daysUntilBirthdayMars).toEqual(0);
+    expect(myAge.daysUntilBirthdayJupiter).toEqual(0);
+    expect(myAge.daysUntilBirthdaySaturn).toEqual(0);
+    expect(myAge.daysUntilBirthdayUranus).toEqual(0);
+    expect(myAge.daysUntilBirthdayNeptune).toEqual(0);
+    expect(myAge.daysUntilBirthdayPluto).toEqual(0);
   });
 });
 
