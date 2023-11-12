@@ -89,7 +89,7 @@ describe("futureBirthday", () => {
 describe("nextBirthday", () => {
   const originalDate = Date.now.bind(global.Date);
   const testDate = (year, month, day) => {
-    global.Date.now = () => new Date(year, month -1, day).getTime();
+    global.Date.now = () => new Date(Date.UTC(year, month - 1, day, 0, 0, 0, 0)).getTime();
   };
 
   afterEach(() => {
@@ -117,4 +117,4 @@ describe("nextBirthday", () => {
     expect(myAge.daysUntilBirthdayEarth).toEqual(0);
   });
 });
-  
+

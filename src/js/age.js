@@ -100,27 +100,22 @@ export default class Age {
   }
 
   nextBirthday() {
-    let day = this.birthdate.getDate();
-    let month = this.birthdate.getMonth() + 1;
-    let year = this.birthdate.getFullYear();
+    let birthDay = this.birthdate.getUTCDate();
+    let birthMonth = this.birthdate.getUTCMonth();
+    let currentYear = new Date().getUTCFullYear();
+
+    let nextBirthday = new Date(Date.UTC(currentYear, birthMonth, birthDay));
+    nextBirthday.setUTCHours(0, 0, 0, 0);
+
     let currentDate = new Date();
-    let currentDay = currentDate.getDate();
-    let currentMonth = currentDate.getMonth() + 1;
-    let currentYear = currentDate.getFullYear();
+    currentDate.setUTCHours(0, 0, 0, 0);
 
-    let nextBirthday;
-
-    if (currentMonth > month || (currentMonth === month && currentDay > day)) {
-      nextBirthday = new Date(currentYear + 1, month - 1, day);
-    } else if (currentMonth < month || (currentMonth === month && currentDay < day)) {
-      nextBirthday = new Date(currentYear, month - 1, day);
-    } else {
-      this.daysUntilBirthdayEarth = 0;
-      return this;
+    if (currentDate > nextBirthday) {
+      nextBirthday.setUTCFullYear(currentYear + 1);
     }
-    const difference = nextBirthday - currentDate;
-    this.daysUntilBirthdayEarth = parseInt((difference / (1000 * 60 * 60 * 24)).toFixed(0));
+
+    const difference = nextBirthday.getTime() - currentDate.getTime();
+    this.daysUntilBirthdayEarth = Math.round(difference / (1000 * 60 * 60 * 24));
     return this;
   }
 }
-
