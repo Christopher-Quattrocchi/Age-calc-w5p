@@ -99,30 +99,30 @@ describe("nextBirthday", () => {
     jest.setSystemTime(new Date('2023-03-01')); // fake date
     let myAge = new Age(37, 40, '1986-02-07');
     myAge.nextBirthday();
-    expect(myAge.daysUntilBirthdayEarth).toBeGreaterThan(0);
-    expect(myAge.daysUntilBirthdayMercury).toBeGreaterThan(0);
-    expect(myAge.daysUntilBirthdayVenus).toBeGreaterThan(0);
-    expect(myAge.daysUntilBirthdayMars).toBeGreaterThan(0);
-    expect(myAge.daysUntilBirthdayJupiter).toBeGreaterThan(0);
-    expect(myAge.daysUntilBirthdaySaturn).toBeGreaterThan(0);
-    expect(myAge.daysUntilBirthdayUranus).toBeGreaterThan(0);
-    expect(myAge.daysUntilBirthdayNeptune).toBeGreaterThan(0);
-    expect(myAge.daysUntilBirthdayPluto).toBeGreaterThan(0);
+    expect(myAge.daysUntilBirthdayEarth).toEqual(343);
+    expect(myAge.daysUntilBirthdayMercury).toEqual(83);
+    expect(myAge.daysUntilBirthdayVenus).toEqual(211);
+    expect(myAge.daysUntilBirthdayMars).toEqual(645);
+    expect(myAge.daysUntilBirthdayJupiter).toEqual(4068);
+    expect(myAge.daysUntilBirthdaySaturn).toEqual(10105);
+    expect(myAge.daysUntilBirthdayUranus).toEqual(28812);
+    expect(myAge.daysUntilBirthdayNeptune).toEqual(56595);
+    expect(myAge.daysUntilBirthdayPluto).toEqual(85064);
   });
 
   test("current date is before birthday this year", () => {
     jest.setSystemTime(new Date('2023-01-01')); // fake date
     let myAge = new Age(37, 40, '1986-02-07');
     myAge.nextBirthday();
-    expect(myAge.daysUntilBirthdayEarth).toBeLessThanOrEqual(37);
-    expect(myAge.daysUntilBirthdayMercury).toBeLessThanOrEqual(154);
-    expect(myAge.daysUntilBirthdayVenus).toBeLessThanOrEqual(60);
-    expect(myAge.daysUntilBirthdayMars).toBeLessThanOrEqual(20);
-    expect(myAge.daysUntilBirthdayJupiter).toBeLessThanOrEqual(3);
-    expect(myAge.daysUntilBirthdaySaturn).toBeLessThanOrEqual(1);
-    expect(myAge.daysUntilBirthdayUranus).toBeLessThanOrEqual(0);
-    expect(myAge.daysUntilBirthdayNeptune).toBeLessThanOrEqual(0);
-    expect(myAge.daysUntilBirthdayPluto).toBeLessThanOrEqual(0);
+    expect(myAge.daysUntilBirthdayEarth).toEqual(37);
+    expect(myAge.daysUntilBirthdayMercury).toEqual(9);
+    expect(myAge.daysUntilBirthdayVenus).toEqual(23);
+    expect(myAge.daysUntilBirthdayMars).toEqual(70);
+    expect(myAge.daysUntilBirthdayJupiter).toEqual(439);
+    expect(myAge.daysUntilBirthdaySaturn).toEqual(1090);
+    expect(myAge.daysUntilBirthdayUranus).toEqual(3108);
+    expect(myAge.daysUntilBirthdayNeptune).toEqual(6105);
+    expect(myAge.daysUntilBirthdayPluto).toEqual(9176);
   });
 
   test("current date is birthday", () => {
