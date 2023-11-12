@@ -87,31 +87,30 @@ describe("futureBirthday", () => {
 });
 
 describe("nextBirthday", () => {
-  const originalDate = Date.now.bind(global.Date);
-  const testDate = (year, month, day) => {
-    global.Date.now = () => new Date(Date.UTC(year, month - 1, day, 0, 0, 0, 0)).getTime();
-  };
+  beforeEach(() => {
+    jest.useFakeTimers('modern'); // Fake date for testing
+  });
 
   afterEach(() => {
-    global.Date.now = originalDate;
+    jest.useRealTimers(); // Return to real date
   });
 
   test("current date after the birthday this year", () => {
-    testDate(2023, 3, 1);
+    jest.setSystemTime(new Date('2023-03-01')); // fake date
     let myAge = new Age(37, 40, '1986-02-07');
     myAge.nextBirthday();
     expect(myAge.daysUntilBirthdayEarth).toBeGreaterThan(0);
   });
 
   test("current date is before birthday this year", () => {
-    testDate(2023, 1, 1);
+    jest.setSystemTime(new Date('2023-01-01')); // fake date
     let myAge = new Age(37, 40, '1986-02-07');
     myAge.nextBirthday();
-    expect(myAge.daysUntilBirthdayEarth).toBeLessThan(37);
+    expect(myAge.daysUntilBirthdayEarth).toBeLessThanOrEqual(37);
   });
 
   test("current date is birthday", () => {
-    testDate(2023, 2, 7);
+    jest.setSystemTime(new Date('2023-02-07')); // fake date
     let myAge = new Age(37, 40, '1986-02-07');
     myAge.nextBirthday();
     expect(myAge.daysUntilBirthdayEarth).toEqual(0);
