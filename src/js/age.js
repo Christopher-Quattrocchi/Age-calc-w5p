@@ -1,5 +1,3 @@
-console.log("Inside age.js");
-
 export default class Age {
   static mercuryYears = 0.241;
   static venusYears = 0.615;
@@ -45,8 +43,6 @@ export default class Age {
     this.daysUntilBirthdayNeptune = null;
     this.daysUntilBirthdayPluto = null;
   }
-
-
 
   mercuryCalculator() {
     this.mercuryAge = parseFloat((this.earthAge / Age.mercuryYears).toFixed(2));

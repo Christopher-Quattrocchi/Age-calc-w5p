@@ -1,29 +1,30 @@
-# (Application Name)
+# (Galactic Age Calculator)
 
-#### (Brief Description of Application)
+#### (Take your age, birthday, and a future age, and calculate how old you are on various planets, how long until your future age, and how long until your birthday on various planets)
 
 #### By (Your Name Here)
-
+_Christopher Quattrocchi_
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _JS, CSS, HTML_
+* _Jest, NPM, Lint_
+* _Git_
+
+[gh-pages link]([
+](https://christopher-quattrocchi.github.io/Pizza-place-w4p/)
+https://christopher-quattrocchi.github.io/Pizza-place-w4p/)
 
 ## Description
-
+Use JS, CSS, HTML, Jest, NPM, Lint and Git to make a page that calculates age and how long until your next birthday on various planets
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Clone project_
+* _npm install_
+* _npm run start_
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _There is no input validation, you must enter input that makes sense for the output to make sense_
 
 ## License
+Copyright (c) 2023-3077 **_{Chris Quattrocchi}_**
