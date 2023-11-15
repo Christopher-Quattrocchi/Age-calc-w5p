@@ -13,6 +13,7 @@
 [gh-pages link]([
 ](https://Christopher-Quattrocchi.github.io/Age-calc-w5p/)
 https://Christopher-Quattrocchi.github.io/Age-calc-w5p/)
+gh-pages link not optimal for this project
 
 ## Description
 Use JS, CSS, HTML, Jest, NPM, Lint and Git to make a page that calculates age and how long until your next birthday on various planets
