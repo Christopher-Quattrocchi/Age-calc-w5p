@@ -2,8 +2,8 @@
 
 #### (Take your age, birthday, and a future age, and calculate how old you are on various planets, how long until your future age, and how long until your birthday on various planets)
 
-#### By (Your Name Here)
-_Christopher Quattrocchi_
+#### By (Christopher Quattrocchi)
+
 ## Technologies Used
 
 * _JS, CSS, HTML_
