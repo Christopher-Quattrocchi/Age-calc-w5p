@@ -87,7 +87,7 @@ export default class Age {
   }
 
   mayflyAgeFinder() {
-
+    this.mayflyAge = parseFloat((this.earthAge * (80 / Age.mayflyLifespanInYears)).toFixed(2));
   }
 
   futureBirthday() {
