@@ -77,6 +77,10 @@ describe("mayflyAgeFinder", () => {
     myAge.mayflyAgeFinder();
     expect(myAge.mayflyAge).toBeGreaterThan(10000);
   })
+  test("It should produce the difference of mayflyAge and earthAge")
+  let myAge = new Age(37);
+  myAge.mayflyAgeFinder();
+  expect(myAge.mayflyAge).toBeGreaterThan(10000);
 })
 
 describe("futureBirthday", () => {

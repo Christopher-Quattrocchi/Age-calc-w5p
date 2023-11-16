@@ -24,6 +24,7 @@ export default class Age {
     this.neptuneAge = null;
     this.plutoAge = null;
     this.mayflyAge = null;
+    this.mayflyAgeDifference = null;
     //Years until a certain age for each planet
     this.yearsUntilAgeEarth = null;
     this.yearsUntilAgeMercury = null;
@@ -88,6 +89,8 @@ export default class Age {
 
   mayflyAgeFinder() {
     this.mayflyAge = parseFloat((this.earthAge * (80 / Age.mayflyLifespanInYears)).toFixed(2));
+    this.mayflyAgeDifference;
+    return this;
   }
 
   futureBirthday() {
