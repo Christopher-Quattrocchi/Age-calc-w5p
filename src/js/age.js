@@ -89,7 +89,7 @@ export default class Age {
 
   mayflyAgeFinder() {
     this.mayflyAge = parseFloat((this.earthAge * (80 / Age.mayflyLifespanInYears)).toFixed(2));
-    this.mayflyAgeDifference = parseFloat(this.earthAge - this.mayflyAge).toFixed(2);
+    this.mayflyAgeDifference = parseFloat(this.mayflyAge - this.earthAge).toFixed(2);
     return this;
   }
 

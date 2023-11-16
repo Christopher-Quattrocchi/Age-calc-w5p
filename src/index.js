@@ -24,7 +24,7 @@ document.getElementById("main-form").addEventListener("submit", function(event) 
     .plutoCalculator()
     .mayflyAgeFinder()
     .futureBirthday()
-    .nextBirthday()
+    .nextBirthday();
 
   const mercuryAge = document.getElementById("mercury-age");//probably should've used a loop or an array or something 
   const venusAge = document.getElementById("venus-age");
@@ -66,7 +66,7 @@ document.getElementById("main-form").addEventListener("submit", function(event) 
   neptuneAge.innerText = `On Neptune, you are ${myAge.neptuneAge} years old`;
   plutoAge.innerText = `On Pluto, you are ${myAge.plutoAge} years old`;
   mayflyAge.innerText = `You are ${myAge.mayflyAge} years old in mayfly years.`;
-  mayflyAge.innerText = `You are this much older in mayfly years: ${myAge.mayflyDifference}.`;
+  mayflyAgeDifference.innerText = `You are this much older in mayfly years: ${myAge.mayflyAgeDifference}.`;
 
   earthFuture.innerText = `You will be ${myAge.futureAge} on Earth in ${myAge.yearsUntilAgeEarth} years`;
   mercuryFuture.innerText = `You will be ${myAge.futureAge} on Mercury in ${myAge.yearsUntilAgeMercury} years`;
