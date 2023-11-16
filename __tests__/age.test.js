@@ -72,72 +72,187 @@ describe("plutoCalculator", () => {
 });
 
 describe("futureBirthday", () => {
-  test("It should return how many years until a birthday in earth years, and for each planet", () => {
-    let myAge = new Age(37, 40);
+  let myAge;
+
+  beforeEach(() => {
+    myAge = new Age(37, 40);
     myAge.futureBirthday();
+  });
+
+  test("It should return how many years until a birthday in Earth years", () => {
     expect(myAge.yearsUntilAgeEarth).toEqual(3);
+  });
+
+  test("It should return how many years until a birthday in Mercury years", () => {
     expect(myAge.yearsUntilAgeMercury).toEqual(12.45);
+  });
+
+  test("It should return how many years until a birthday in Venus years", () => {
     expect(myAge.yearsUntilAgeVenus).toEqual(4.88);
+  });
+
+  test("It should return how many years until a birthday in Mars years", () => {
     expect(myAge.yearsUntilAgeMars).toEqual(1.60);
+  });
+
+  test("It should return how many years until a birthday in Saturn years", () => {
     expect(myAge.yearsUntilAgeSaturn).toEqual(0.10);
+  });
+
+  test("It should return how many years until a birthday in Uranus years", () => {
     expect(myAge.yearsUntilAgeUranus).toEqual(0.04);
+  });
+
+  test("It should return how many years until a birthday in Neptune years", () => {
     expect(myAge.yearsUntilAgeNeptune).toEqual(0.02);
+  });
+
+  test("It should return how many years until a birthday in Pluto years", () => {
     expect(myAge.yearsUntilAgePluto).toEqual(0.01);
   });
 });
 
+
+
 describe("nextBirthday", () => {
+  let myAge;
+
   beforeEach(() => {
-    jest.useFakeTimers('modern'); // Fake date for testing
+    jest.useFakeTimers('modern');//mock date
   });
 
   afterEach(() => {
-    jest.useRealTimers(); // Return to real date
+    jest.useRealTimers();//real date
   });
 
-  test("current date after the birthday this year", () => {
-    jest.setSystemTime(new Date('2023-03-01')); // fake date
-    let myAge = new Age(37, 40, '1986-02-07');
-    myAge.nextBirthday();
-    expect(myAge.daysUntilBirthdayEarth).toEqual(343);
-    expect(myAge.daysUntilBirthdayMercury).toEqual(83);
-    expect(myAge.daysUntilBirthdayVenus).toEqual(211);
-    expect(myAge.daysUntilBirthdayMars).toEqual(645);
-    expect(myAge.daysUntilBirthdayJupiter).toEqual(4068);
-    expect(myAge.daysUntilBirthdaySaturn).toEqual(10105);
-    expect(myAge.daysUntilBirthdayUranus).toEqual(28812);
-    expect(myAge.daysUntilBirthdayNeptune).toEqual(56595);
-    expect(myAge.daysUntilBirthdayPluto).toEqual(85064);
+  describe("current date after the birthday this year", () => {
+    beforeEach(() => {
+      jest.setSystemTime(new Date('2023-03-01'));//mock for test
+      myAge = new Age(37, 40, '1986-02-07');
+      myAge.nextBirthday();
+    });
+    test("It should return days until Earth birthday", () => {
+      expect(myAge.daysUntilBirthdayEarth).toEqual(343);
+    });
+    test("It should return days until Mercuy birthday", () => {
+      expect(myAge.daysUntilBirthdayMercury).toEqual(83);
+    });
+
+    test("It should return days until Venus birthday", () => {
+      expect(myAge.daysUntilBirthdayVenus).toEqual(211);
+    });
+
+    test("It should return days until Mars birthday", () => {
+      expect(myAge.daysUntilBirthdayMars).toEqual(645);
+    });
+
+    test("It should return days until Jupiter birthday", () => {
+      expect(myAge.daysUntilBirthdayJupiter).toEqual(4068);
+    });
+
+    test("It should return days until Saturn birthday", () => {
+      expect(myAge.daysUntilBirthdaySaturn).toEqual(10105);
+    });
+
+    test("It should return days until Uranus birthday", () => {
+      expect(myAge.daysUntilBirthdayUranus).toEqual(28812);
+    });
+
+    test("It should return days until Neptune birthday", () => {
+      expect(myAge.daysUntilBirthdayNeptune).toEqual(56595);
+    });
+
+    test("It should return days until Pluto birthday", () => {
+      expect(myAge.daysUntilBirthdayPluto).toEqual(85064);
+    });
   });
 
-  test("current date is before birthday this year", () => {
-    jest.setSystemTime(new Date('2023-01-01')); // fake date
-    let myAge = new Age(37, 40, '1986-02-07');
-    myAge.nextBirthday();
-    expect(myAge.daysUntilBirthdayEarth).toEqual(37);
-    expect(myAge.daysUntilBirthdayMercury).toEqual(9);
-    expect(myAge.daysUntilBirthdayVenus).toEqual(23);
-    expect(myAge.daysUntilBirthdayMars).toEqual(70);
-    expect(myAge.daysUntilBirthdayJupiter).toEqual(439);
-    expect(myAge.daysUntilBirthdaySaturn).toEqual(1090);
-    expect(myAge.daysUntilBirthdayUranus).toEqual(3108);
-    expect(myAge.daysUntilBirthdayNeptune).toEqual(6105);
-    expect(myAge.daysUntilBirthdayPluto).toEqual(9176);
-  });
+  describe("current date is before birthday this year", () => {
+    beforeEach(() => {
+      jest.setSystemTime(new Date('2023-01-01'));
+      myAge = new Age(37, 40, '1986-02-07');
+      myAge.nextBirthday();
+    });
 
-  test("current date is birthday", () => {
-    jest.setSystemTime(new Date('2023-02-07')); // fake date
-    let myAge = new Age(37, 40, '1986-02-07');
-    myAge.nextBirthday();
-    expect(myAge.daysUntilBirthdayEarth).toEqual(0);
-    expect(myAge.daysUntilBirthdayMercury).toEqual(0);
-    expect(myAge.daysUntilBirthdayVenus).toEqual(0);
-    expect(myAge.daysUntilBirthdayMars).toEqual(0);
-    expect(myAge.daysUntilBirthdayJupiter).toEqual(0);
-    expect(myAge.daysUntilBirthdaySaturn).toEqual(0);
-    expect(myAge.daysUntilBirthdayUranus).toEqual(0);
-    expect(myAge.daysUntilBirthdayNeptune).toEqual(0);
-    expect(myAge.daysUntilBirthdayPluto).toEqual(0);
+    test("It should return days until Earth birthday", () => {
+      expect(myAge.daysUntilBirthdayEarth).toEqual(37);
+    });
+
+    test("It should return days until Mercury birthday", () => {
+      expect(myAge.daysUntilBirthdayMercury).toEqual(9);
+    });
+
+    test("It should return days until Venus birthday", () => {
+      expect(myAge.daysUntilBirthdayVenus).toEqual(23);
+    });
+
+    test("It should return days until Mars birthday", () => {
+      expect(myAge.daysUntilBirthdayMars).toEqual(70);
+    });
+
+    test("It should return days until Jupiter birthday", () => {
+      expect(myAge.daysUntilBirthdayJupiter).toEqual(439);
+    });
+
+    test("It should return days until Saturn birthday", () => {
+      expect(myAge.daysUntilBirthdaySaturn).toEqual(1090);
+    });
+
+    test("It should return days until Uranus birthday", () => {
+      expect(myAge.daysUntilBirthdayUranus).toEqual(3108);
+    });
+
+    test("It should return days until Neptune birthday", () => {
+      expect(myAge.daysUntilBirthdayNeptune).toEqual(6105);
+    });
+
+    test("It should return days until Pluto birthday", () => {
+      expect(myAge.daysUntilBirthdayPluto).toEqual(9176);
+    });
+
+    describe("current date is birthday", () => {
+      beforeEach(() => {
+        jest.setSystemTime(new Date('2023-02-07'));
+        myAge = new Age(37, 40, '1986-02-07');
+        myAge.nextBirthday();
+      });
+
+      test("It should return 0 days until Earth birthday", () => {
+        expect(myAge.daysUntilBirthdayEarth).toEqual(0);
+      });
+
+      test("It should return 0 days until Mercury birthday", () => {
+        expect(myAge.daysUntilBirthdayMercury).toEqual(0);
+      });
+
+      test("It should return 0 days until Venus birthday", () => {
+        expect(myAge.daysUntilBirthdayVenus).toEqual(0);
+      });
+
+      test("It should return 0 days until Mars birthday", () => {
+        expect(myAge.daysUntilBirthdayMars).toEqual(0);
+      });
+
+      test("It should return 0 days until Jupiter birthday", () => {
+        expect(myAge.daysUntilBirthdayJupiter).toEqual(0);
+      });
+
+      test("It should return 0 days until Saturn birthday", () => {
+        expect(myAge.daysUntilBirthdaySaturn).toEqual(0);
+      });
+
+      test("It should return 0 days until Uranus birthday", () => {
+        expect(myAge.daysUntilBirthdayUranus).toEqual(0);
+      });
+
+      test("It should return 0 days until Neptune birthday", () => {
+        expect(myAge.daysUntilBirthdayNeptune).toEqual(0);
+      });
+
+      test("It should return 0 days until Pluto birthday", () => {
+        expect(myAge.daysUntilBirthdayPluto).toEqual(0);
+      });
+    });
   });
 });
 
