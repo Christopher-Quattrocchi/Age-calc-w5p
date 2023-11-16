@@ -7,7 +7,7 @@ export default class Age {
   static uranusYears = 84;
   static neptuneYears = 165;
   static plutoYears = 248;
-  static mayflyLifespanInYears = 0.00000951;//
+  static mayflyLifespanInYears = 0.00000951;
 
   constructor(earthAge, futureAge, birthdate) {
     //Earth age, future age, birthdate
