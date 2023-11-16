@@ -71,6 +71,14 @@ describe("plutoCalculator", () => {
   });
 });
 
+describe("mayflyAgeFinder", () => {
+  test("It should tell the user how old they are in mayfly years", () {
+    let myAge = new Age(37);
+    myAge.mayflyAgeFinder();
+    expect(myAge.mayflyAge).toBeGreaterThan(10000);
+  })
+})
+
 describe("futureBirthday", () => {
   let myAge;
 
@@ -111,8 +119,6 @@ describe("futureBirthday", () => {
     expect(myAge.yearsUntilAgePluto).toEqual(0.01);
   });
 });
-
-
 
 describe("nextBirthday", () => {
   let myAge;

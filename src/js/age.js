@@ -7,6 +7,7 @@ export default class Age {
   static uranusYears = 84;
   static neptuneYears = 165;
   static plutoYears = 248;
+  static mayflyLifespanInYears = 0.00000951;//
 
   constructor(earthAge, futureAge, birthdate) {
     //Earth age, future age, birthdate
@@ -22,6 +23,7 @@ export default class Age {
     this.uranusAge = null;
     this.neptuneAge = null;
     this.plutoAge = null;
+    this.mayflyAge = null;
     //Years until a certain age for each planet
     this.yearsUntilAgeEarth = null;
     this.yearsUntilAgeMercury = null;
@@ -82,6 +84,10 @@ export default class Age {
   plutoCalculator() {
     this.plutoAge = parseFloat((this.earthAge / Age.plutoYears).toFixed(2));
     return this;
+  }
+
+  mayflyAgeFinder() {
+
   }
 
   futureBirthday() {
