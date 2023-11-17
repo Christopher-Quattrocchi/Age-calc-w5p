@@ -12,8 +12,13 @@
 
 [gh-pages link]([
 ](https://Christopher-Quattrocchi.github.io/Age-calc-w5p/)
+<<<<<<< HEAD
 https://Christopher-Quattrocchi.github.io/Age-calc-w5p/)  
 The gh-pages branch exists, but I don't recommend using it to use the project
+=======
+https://Christopher-Quattrocchi.github.io/Age-calc-w5p/)
+gh-pages link not optimal for this project
+>>>>>>> d0ebb1f2fda9e75a6ba05dcbb2048bff7e013b89
 
 ## Description
 Use JS, CSS, HTML, Jest, NPM, Lint and Git to make a page that calculates age and how long until your next birthday on various planets
@@ -29,6 +34,7 @@ Use JS, CSS, HTML, Jest, NPM, Lint and Git to make a page that calculates age an
 * _There is no input validation, you must enter input that makes sense for the output to make sense_
 
 ## License
+<<<<<<< HEAD
 MIT License
 
 Copyright (c) [2023] [Christopher Quattrocchi]
@@ -50,3 +56,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
+=======
+Copyright (c) 2023-3077 **_{Chris Quattrocchi}_**
+>>>>>>> d0ebb1f2fda9e75a6ba05dcbb2048bff7e013b89
