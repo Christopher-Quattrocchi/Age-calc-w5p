@@ -1,61 +1,41 @@
-# (Galactic Age Calculator)
+# Galactic Age Calculator
 
-#### (Take your age, birthday, and a future age, and calculate how old you are on various planets, how long until your future age, and how long until your birthday on various planets)
+## Overview
+The Galactic Age Calculator is an intriguing web application that allows users to discover their age on various planets in our solar system. Enter your age, birthday, and a future age to explore these fascinating calculations.
 
-#### By (Christopher Quattrocchi)
+### Created By
+Christopher Quattrocchi
 
 ## Technologies Used
+- JavaScript
+- CSS
+- HTML
+- Jest (Testing)
+- npm (Node Package Manager)
+- ESLint (Linting)
+- Git (Version Control)
 
-* _JS, CSS, HTML_
-* _Jest, NPM, Lint_
-* _Git_
-
-[gh-pages link]([
-](https://Christopher-Quattrocchi.github.io/Age-calc-w5p/)
-<<<<<<< HEAD
-https://Christopher-Quattrocchi.github.io/Age-calc-w5p/)  
-The gh-pages branch exists, but I don't recommend using it to use the project
-=======
-https://Christopher-Quattrocchi.github.io/Age-calc-w5p/)
-gh-pages link not optimal for this project
->>>>>>> d0ebb1f2fda9e75a6ba05dcbb2048bff7e013b89
+## Live Demo
+[Galactic Age Calculator Live Demo](https://Christopher-Quattrocchi.github.io/Age-calc-w5p/)
+(Note: The gh-pages branch exists but may not provide the optimal experience for this project.)
 
 ## Description
-Use JS, CSS, HTML, Jest, NPM, Lint and Git to make a page that calculates age and how long until your next birthday on various planets
-## Setup/Installation Requirements
+This application uses JavaScript, CSS, and HTML to calculate and display your age and the time until your next birthday on various planets. It's a fun way to learn about planetary years and see how age varies across our solar system.
 
-* _Clone project_
-* _Navigate to project directory
-* _npm install_ (To install dependencies)
-* _npm run start_ (package.json is set up in a way that this will automatically build the project; you can just enter npm run start to display the page)
+## Setup/Installation Requirements
+- Clone the project repository.
+- Navigate to the project directory.
+- Run `npm install` to install dependencies.
+- Execute `npm run start` to start the application. This will build and display the page automatically.
 
 ## Known Bugs
-
-* _There is no input validation, you must enter input that makes sense for the output to make sense_
+- The application currently lacks input validation. Ensure you enter logical input values for accurate output.
 
 ## License
-<<<<<<< HEAD
 MIT License
 
-Copyright (c) [2023] [Christopher Quattrocchi]
+Copyright (c) 2023 Christopher Quattrocchi
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE. 
-=======
-Copyright (c) 2023-3077 **_{Chris Quattrocchi}_**
->>>>>>> d0ebb1f2fda9e75a6ba05dcbb2048bff7e013b89
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
