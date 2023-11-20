@@ -1,7 +1,21 @@
 body {
-  background-color: lightblue;
   background-image: url(../img/background1.jpg);
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
-  color:rgb(255, 255, 255);
+  background-size: cover;
+
+  color: rgba(255, 255, 255);
   text-align: center;
+}
+
+.parallax {
+
+
+  height: 90vh;
+}
+
+.container {
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.774);
 }
